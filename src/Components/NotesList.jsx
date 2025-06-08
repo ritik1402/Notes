@@ -1,12 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect,useRef } from 'react';
 
 const NotesList = () => {
   const [note, setNote] = useState('');
   const [notes, setNotes] = useState([]);
+  const isFirstRender = useRef(true);
+
+  useEffect(()=>{
+    const storedNotes = localStorage.getItem("getNote")
+    if(storedNotes){
+        setNotes(JSON.parse(storedNotes))
+    }
+
+  },[])
+
+  useEffect(()=>{
+    if(isFirstRender.current){
+        isFirstRender.current = false;
+       return;
+    }
+    const storedNotes = localStorage.setItem("getNote",JSON.stringify(notes))
+  },[notes])
 
 
   const saveNote = ()=>{
-    if(note.trim == "") return;
+    if(note.trim() == "") return;
     setNotes([...notes, note]);
   }
 
