@@ -1,0 +1,49 @@
+✅ Intermediate Animation Ideas
+Animated Delete
+
+Animate note fading out + shrinking on delete using exit={{ opacity: 0, scale: 0.5 }} with AnimatePresence.
+
+Editing Mode Transition
+
+Use smooth crossfade between the note view and the input form when editing.
+
+Lottie Add/Empty State
+
+Use Lottie animation:
+
+When no notes: show an empty state animation (e.g., “No Notes Found”).
+
+When a note is added successfully: brief success animation.
+
+Expand on Click
+
+Notes expand vertically to show full content with animation when clicked.
+
+✅ Advanced Animation Ideas
+Drag-and-Drop Reordering
+
+Implement drag-to-reorder functionality using Framer Motion’s drag and layout.
+
+3D Rotate on Flip
+
+When editing, the card flips 180° (like a card flip) to reveal the input field.
+
+Confetti Lottie Animation
+
+Show confetti using Lottie on first note added or after a certain milestone (e.g., 10 notes).
+
+Page Transition Animation
+
+If you build separate pages (e.g., Dashboard, Notes), animate them with slide or fade transitions.
+
+Animated Background
+
+Subtly animated background or gradient waves using Lottie or SVG-based animated backgrounds.
+
+✅ Bonus: Microinteractions
+Input focus glow: Animate border shadow when input is focused.
+
+Button loading spinner: Lottie spinner while saving or editing.
+
+Delete shake warning: Brief shake on delete confirmation if needed.
+
